@@ -1,0 +1,7 @@
+ada:
+  email: ada@example.com
+  password_digest: <%= BCrypt::Password.create('ada', cost: 4) %>
+
+grace:
+  email: grace@example.com
+  password_digest: <%= BCrypt::Password.create('grace', cost: 4) %>

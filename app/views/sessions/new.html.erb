@@ -1,0 +1,16 @@
+<p id="alert"><%= alert %></p>
+
+<h1>Login</h1>
+<%= form_tag session_path do |f| -%>
+<p>
+    <%= label_tag :email, 'Email:' -%>
+    <%= text_field_tag :email -%>
+</p>
+<p>
+    <%= label_tag :password, 'Password:' -%>
+    <%= password_field_tag :password -%>
+</p>
+<p>
+    <%= submit_tag 'Login' %>
+</p>
+<% end -%>

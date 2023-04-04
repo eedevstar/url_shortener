@@ -1,0 +1,9 @@
+<br/>
+<div>
+    <% link = "http://#{request.host_with_port}/#{shortened_url.short_url}" %>
+    <%= link_to link, link, target: :_blank %>
+    Clicked count: <%= shortened_url.clicked %>
+    <% if Current.user.present? && Current.user.id == shortened_url.user_id %>
+        <%= link_to "Delete", shortened_url_path(shortened_url), data: {turbo_method: :delete} %>
+    <% end %>
+</div>

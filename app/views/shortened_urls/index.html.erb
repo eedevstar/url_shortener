@@ -1,0 +1,22 @@
+<% if Current.user.present? %>
+    <%= link_to "Log Out", session_path, data: {turbo_method: :delete} %>
+    <br/>
+    <h2>Type the Url</h2>
+    <%= form_with model: @url do |form| %>
+        <div>
+            <%= form.text_field :original_url %>
+            <% @url.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+        <%= form.submit %>
+    <% end %>
+<% else %>
+    <%= link_to "Log In", new_session_path %>
+<% end %>
+
+<%= render 'layouts/flashes' %>
+
+<br/>
+
+<%= render @shortened_urls %>
