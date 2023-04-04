@@ -14,3 +14,15 @@ URL shortener solves the problem of sharing the long website URLs by shortening 
 1. For the demonstration purposes, please assume that only authorized users can create or modify shortened links but please don't bother about security too much - even the simplest authentication method should be sufficient.
 2. It's also okay to omit the non-essential parts like user management - in that case a simpe seed file is enough
 
+# Set up the app
+This app is developed 
+* Ruby - 3.1.3
+* Rails - 7.0.4.3
+
+## Run the app
+
+```sh
+% bin/rails db:prepare
+% bin/rails db:fixtures:load
+% bin/rails server -d
+```
