@@ -18,6 +18,9 @@ URL shortener solves the problem of sharing the long website URLs by shortening 
 This app is developed 
 * Ruby - 3.1.3
 * Rails - 7.0.4.3
+* Added 2 Models, User & ShortenedUrl
+* Added Simple User Authentication
+* gest users can see & click the shortened urls
 
 ## Run the app
 
